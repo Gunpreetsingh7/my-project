@@ -43,3 +43,8 @@ INVALID INPUTS:
 4. FORM SUBMISSION:
     Submit with all valid fields will be Success
     Submit with 1+ invalid fields, form should not submit, browser displays validation messages
+
+LEARNING OUTCOMES:
+1.How to create a student registration form
+2.Learnt how to use html 5 validations.
+3.How to run test cases for the student registration form.
