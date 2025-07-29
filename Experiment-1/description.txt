@@ -1,0 +1,45 @@
+STUDENT REGISTRATION FORM TEST CASES & VALIDATIONS
+
+1. FIELD: Name
+   Requirement: Required means the field cant be empty
+   only Uppercase and Lowercase alphabets and spaces allowed (pattern = [A-Za-z\s]+)
+   + means one or more than one
+VALID INPUTS:
+    "Gunpreet Singh"
+    "Charanjit Singh"
+INVALID INPUTS:
+    " " (empty) - Should trigger "required" error
+    "gunpreet123" - Contains numbers should trigger pattern mismatch
+    "gunpreet_singh" - Contains underscore that is invalid character
+    "gunpreet@singh" - Contains special character
+
+2. FIELD: Email
+    Requirement: Required means the field cant be empty
+    must follow standard email format that is example@domain.com/in
+VALID INPUTS:
+    "gunpreetsingh777@gmail.com"
+    "user123@gmail.co.in"
+INVALID INPUTS:
+    " " (empty) - Should trigger "required" error
+    "gumpreet.singh" - Missing @ and domain
+    "gunpreet@.com" - Missing domain name
+    "gunpreet@com" - Missing . in domain
+    "gunpreet@domain,com" - Comma instead of dot
+
+3. FIELD: Age
+    Requirement: Required means the field cant be empty,
+    numeric means that it can only take numbers as inputs,
+    minimum age should not be less than 5 and not greater than 130
+VALID INPUTS:
+    5 - Minimum valid
+    18, 65 - Typical valid ages
+    130 - Maximum valid
+INVALID INPUTS:
+    " " (empty) - Should trigger required error
+    4 - Below min will be invalid
+    131 - Above max will be invalid
+    "abc" - Non-numeric will be invalid
+
+4. FORM SUBMISSION:
+    Submit with all valid fields will be Success
+    Submit with 1+ invalid fields, form should not submit, browser displays validation messages
