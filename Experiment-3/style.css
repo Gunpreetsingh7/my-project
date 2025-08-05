@@ -1,19 +1,39 @@
-header{
+header {
     border: 2px solid #000;
-    background-color:rgb(39, 212, 39) ;
+    background-color: rgb(31, 175, 31);
+    grid-column: 1/span2;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-nav{
+
+nav {
     border: 2px solid #000;
     background-color: rgb(222, 221, 221);
+    height: auto;
 }
-main{
+
+main {
     border: 2px solid #000;
     background-color: white;
+    height: auto;
+    padding-left: 10px;
 }
-footer{
+
+footer {
     border: 2px solid #000;
-    background-color:rgb(39, 212, 39) ;
+    background-color: rgb(31, 175, 31);
+    grid-column: 1/span2;
+    height: fit-content;
+    text-align: center;
+    color: white
 }
-.container{
+
+.container {
+    height: 100vh;
     display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 60px auto 60px;
 }
