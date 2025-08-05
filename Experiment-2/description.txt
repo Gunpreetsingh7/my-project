@@ -1,0 +1,60 @@
+Transaction Page - HTML & CSS Description
+
+HTML STRUCTURE
+
+1. <head>
+   <meta charset="UTF-8"> sets character encoding.
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> makes it responsive on different devices.
+   <title> sets the browser tab title to "Transaction Page".
+
+2. <body>
+   Contains a main container <div class="transaction"> for the transaction card.
+   Inside it is <div class="inner"> which holds:
+     A <div class="count">$0</div> to show the balance.
+     A <div class="buttons"> that wraps two buttons:
+       button class="Deposit">DEPOSIT</button>
+       <button class="Withdraw">WITHDRAW</button>
+
+CSS STYLING
+1. .transaction
+   Size: 400px width, 300px height
+   Centered using margin and flexbox
+   Background color: light beige
+   Border: 2px solid black
+
+2. .inner
+   Size: 300x200px
+   Background: aliceblue
+   Rounded corners, center-aligned
+   Uses flexbox to arrange children vertically
+   Box shadow for depth (note: "0ch" should be "0px")
+
+3. .count
+   Displays balance
+   Green colored text
+   Bold, centered, large font (25px)
+
+4. .buttons
+   Flexbox to arrange buttons in a row
+   gap: 10px for spacing between them
+
+5. .Deposit button
+    Width is set to 250px
+    Height is set to 35px
+    Background is green
+    Text color is white
+    Added rounded corners
+
+6. .Withdraw button
+    Same as Deposit but with red background
+
+7. Media Queries
+   For screens of size <= 480px, buttons will be stacked vertically (flex-direction: column)
+   For screens of size >= 481px, buttons shrink to 120px width, 30px height, font size 12px
+
+LEARNING OUTCOMES:
+1.	Built a structured HTML layout using semantic tags and nested containers.
+2.	Styled components using external CSS with Flexbox for alignment and spacing.
+3.	Applied responsive design using media queries for different screen sizes.
+4.	Enhanced UI with visual styling like colors, shadows, and rounded corners.
+5.	Linked HTML and CSS files correctly and debugged common styling issues.
