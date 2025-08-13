@@ -1,0 +1,101 @@
+#ADMIN DASHBOARD 
+
+#HTML FILE:-
+
+1. <body>
+	-The main container for all visible webpage content.
+
+2. <input type="checkbox" id="Toggle" />
+	A hidden checkbox used to toggle between light and dark mode.
+	The id="Toggle" allows it to be connected with a <label> using <label for=" ">.
+
+3. <div class="container">
+	A wrapper div with the class container.
+	Holds all the main sections of the layout: header, nav, main, and footer.
+
+4. <header>
+	This section is used to display the top bar of the page.
+	Contains the site title and dark mode toggle label.
+Inside <header>:
+	<h1>Admin Dashboard</h1>
+- Displays the title or heading of the dashboard.
+	<label for="Toggle">Dark Mode</label>
+- Linked to the checkbox with id=“Toggle” then clicking it will toggle the checkbox.
+
+5. <nav>
+	Navigation bar content.
+	Contains navigation links for different sections of the site.
+Inside <nav>:
+	•	<ul>
+- Unordered list to hold multiple menu items.
+	•	<li>
+- List item in the menu.
+	•	<a href="">Home</a>
+- A hyperlink (currently with empty URL) labeled “Home”.
+	•	<a href="">User</a>
+- A hyperlink labeled “User”.
+	•	<a href="">Settings</a>
+- A hyperlink labeled “Settings”.
+
+6. <main>
+	•	The main content area of the webpage.
+Inside <main>:
+	•	<h2>Welcome, Admin!</h2>
+- A secondary heading to greet the user.
+	•	<p>This is the main content area...
+- A paragraph explaining that the user can add charts, tables, etc.
+
+7. <footer>
+	•	Bottom section of the page.
+	•	Usually contains copyright.
+Inside <footer>:
+	•	<p>&copy; 2025 Admin Panel.</p>
+- A paragraph with the copyright.
+
+
+# FOR CSS FILE:-
+
+1. Theme Variables
+	•	--header-bg-color - background color for the header.
+	•	--footer-bg-color - background color for the footer.
+	•	--nav-bg-color - background color for the navigation section.
+	•	--main-color - background color for the main content area.
+
+2. Dark Mode Styling (Checkbox Trigger)
+	•	When the hidden checkbox (#Toggle) is checked, the theme variables are updated to dark mode colors.
+	•	input:checked ~ .container means:
+	•	Apply these changes to .container if an input is checked and is placed before .container in the HTML.
+
+3. Page Sections Styling
+    -Header
+    	•	Border - solid black, 2px.
+    	•	Background color - from --header-bg-color.
+    	•	Grid position - spans across both columns (grid-column: 1 / span 2).
+    	•	Flexbox - spaces elements evenly (justify-content: space-between) and aligns them vertically center.
+    	•	Padding - 10px for spacing inside the header.
+    -Navigation
+        •	Border - solid black.
+    	•	Background color - from --nav-bg-color.
+    	•	Height - adjusts to fit content.
+    -Main Content
+    	•	Border - solid black.
+    	•	Background color - from --main-color.
+    	•	Padding-left - adds space from the left edge for content.
+    -Footer
+    	•	Border - solid black.
+    	•	Background color - from --footer-bg-color.
+    	•	Grid position - spans across both columns.
+    	•	Text alignment - centered.
+    	•	Height - fits content height automatically.
+
+4. Toggle Button (Hidden Checkbox)
+	•	The checkbox is hidden from view but still functions to switch between light and dark modes when triggered.
+
+5. Grid Layout for the Whole Page
+	•	Full height (100vh).
+	•	Grid layout:
+	•	Columns - 150px (sidebar/nav) + 1fr (remaining space for content).
+	•	Rows -
+	•	Row 1: Header - 60px height.
+	•	Row 2: Main content and navigation - auto height.
+	•	Row 3: Footer - 60px height.
