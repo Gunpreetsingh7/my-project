@@ -1,0 +1,31 @@
+1. HTML – The Skeleton
+
+The HTML defines the structure of the page.
+	•	<body> : Holds all visible content.
+	•	<div class="counter-container"> : A box to hold the entire tool.
+	•	<h2>Live Character Counter</h2> : The heading/title of the tool.
+	•	<textarea placeholder="Start typing..."></textarea> : The text box where users type.
+	•	<div class="count">Characters : 0</div> : Displays the current character count.
+
+⸻
+
+2. CSS – The Style
+
+The CSS adds visual design to make the tool user-friendly.
+	•	body : Sets font style and page margin.
+	•	.counter-container : Creates a neat box with border, padding, and max-width.
+	•	textarea : Styles the typing box with height, font, padding, and spacing.
+	•	.count : Displays character count in bold with spacing above it.
+
+⸻
+
+3. JavaScript – The Brain
+
+The JavaScript makes the tool interactive by updating the count in real time.
+	•	Finding elements : Selects the <textarea> and .count display.
+	•	Listening for input : Adds an event listener to track typing or deleting.
+	•	Updating count :
+	•	Gets text from the textarea.
+	•	Removes leading/trailing spaces using .trim().
+	•	Counts characters using .length.
+	•	Displaying count : Updates the .count element instantly with the new number.
