@@ -1,0 +1,35 @@
+1. HTML Structure
+
+The HTML provides the semantic layout of the webpage:
+	•	<head> section: Contains meta information (character encoding, viewport settings for responsiveness, page title, and CSS styles).
+	•	<body> section: Contains all visible elements, including:
+	•	A container <div> that holds the product filter interface.
+	•	A heading (<h2>Product List) and a label + select dropdown (<select>) to allow users to filter products by category.
+	•	A product list container (<div id="product-list">) that holds individual product items.
+
+2. CSS Styling
+
+The CSS ensures the page is visually structured and user-friendly:
+	•	Typography: Uses a clean, sans-serif font (Arial).
+	•	Container (.container): Styled with a border, padding, and fixed width (400px), and centered using margin: 30px auto.
+	•	Heading (h2): Adds spacing below the heading for readability.
+	•	Dropdown (select): Styled with padding and spacing below it.
+	•	Product (.product): Each product is displayed as a bordered, padded, and rounded card with spacing between products (margin-bottom).
+
+3. JavaScript Functionality
+
+The JavaScript provides the interactivity that allows filtering of products:
+	
+    1.	Element Selection
+	•	The dropdown element is accessed via document.getElementById("category").
+	•	All products are selected via document.querySelectorAll(".product").
+	
+    2.	Event Listener
+	•	A change event listener is attached to the dropdown.
+	•	When the user selects a category, the callback function is triggered.
+	
+    3.	Filtering Logic
+	•	The selected category is retrieved from the dropdown (this.value).
+	•	Each product is iterated over using forEach().
+	•	If the selected category is "all", every product is displayed.
+	•	Otherwise, only products whose data-category matches the selected value are shown (display: block), while non-matching products are hidden (display: none).
