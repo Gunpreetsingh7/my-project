@@ -1,0 +1,66 @@
+
+Project Summary
+
+This project is a Library Management System built with React. It provides users with the ability to manage a book collection through features like adding, searching, and deleting books. The project highlights the use of modern React practices such as component-driven development, state handling, and event-driven updates.
+
+Conceptual Background
+
+React is a popular JavaScript library for creating user interfaces. In this project, we focused on:
+	•	Components: Independent UI pieces (SearchBar, AddBookForm, BookList, etc.).
+	•	Props: Passing information between parent and child components.
+	•	State (useState): Managing live data like the list of books and search queries.
+	•	Events: Handling user interactions such as typing in the input box or clicking buttons.
+
+Tech Stack
+	•	Frontend: React.js (bundled with Vite for faster development)
+	•	Markup: HTML5
+	•	Styling: Plain CSS (App.css for design and layout)
+    Experiment-8/
+├── index.html              # Entry file with root <div>
+├── src/
+│   ├── App.jsx             # Loads the main <Library /> component
+│   ├── main.jsx            # Mounts React app
+│   ├── App.css             # Styling for app UI
+│   ├── index.css           # Base/global styles
+│   └── components/
+│       ├── Library.jsx     # Core logic: add, search, remove books
+│       ├── SearchBar.jsx   # Search input component
+│       ├── AddBookForm.jsx # Form to add books
+│       ├── BookList.jsx    # Displays the list of books
+│       └── BookItem.jsx    # Renders details of a single book
+├── Description.txt         # Project description
+└── package.json
+Core Functionalities
+	1.	Add Book
+	•	User enters Title and Author in AddBookForm.
+	•	On clicking “Add Book,” a new book object is created and added to the state in Library.jsx.
+	•	The updated list instantly shows up in BookList.
+	2.	Remove Book
+	•	Each book has a “Remove” button.
+	•	Clicking it triggers handleRemoveBook(id) in Library.jsx.
+	•	The book is removed from the state, and the UI updates immediately.
+	3.	Search Books
+	•	The search input is controlled by state in Library.jsx.
+	•	As the user types, the book list is filtered in real time.
+	4.	Display Books
+	•	Books are shown in a neat card-style layout.
+	•	Each entry highlights the title in bold and shows the author below.
+
+Usage Guide
+	•	Search: Filter books by typing in the search bar.
+	•	Add: Enter a book’s title and author, then click “Add Book.”
+	•	Remove: Delete any book by clicking the corresponding button.
+	•	All actions are instant, without page reloads.
+
+Running the Project
+	1.	Go to the project folder.
+	2.	Run npm install (if you haven’t already installed dependencies).
+	3.	Run npm run dev.
+	4.	Open the browser at http://localhost:5173 (or the port shown in terminal).
+
+Skills & Learning Outcomes
+	•	Hands-on with dynamic rendering and filtering.
+	•	Practical use of React hooks (useState).
+	•	Designing layouts with CSS.
+	•	Clear understanding of component composition and prop drilling.
+	•	Improved knowledge of event handling and form management in React.
