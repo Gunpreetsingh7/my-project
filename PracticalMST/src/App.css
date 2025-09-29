@@ -1,0 +1,23 @@
+.app {
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.add-item {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-item input {
+  padding: 5px;
+  width: 100px;
+}
+
+.add-item button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
